@@ -143,7 +143,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Work() {
-  let caseStudies = await loadCaseStudies()
+  const caseStudies = await loadCaseStudies()
 
   return (
     <>
