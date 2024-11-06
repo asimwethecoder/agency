@@ -1,60 +1,180 @@
-import { type Metadata } from 'next'
-import Image from 'next/image'
+import { Metadata } from 'next';
+import Image from 'next/image';
 
-import { Border } from '@/components/Border'
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { GridList, GridListItem } from '@/components/GridList'
-import { PageIntro } from '@/components/PageIntro'
-import { PageLinks } from '@/components/PageLinks'
-import { SectionIntro } from '@/components/SectionIntro'
-import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
-import { loadArticles } from '@/lib/mdx'
+import { Border } from '@/components/Border';
+import { ContactSection } from '@/components/ContactSection';
+import { Container } from '@/components/Container';
+import { FadeIn, FadeInStagger } from '@/components/FadeIn';
+import { GridList, GridListItem } from '@/components/GridList';
+import { PageIntro } from '@/components/PageIntro';
+import { PageLinks } from '@/components/PageLinks';
+import { SectionIntro } from '@/components/SectionIntro';
+import { StatList, StatListItem } from '@/components/StatList';
+import imageAngelaFisher from '@/images/team/angela-fisher.jpg';
+import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg';
+import imageBlakeReid from '@/images/team/blake-reid.jpg';
+import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg';
+import imageDriesVincent from '@/images/team/dries-vincent.jpg';
+import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg';
+import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg';
+import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg';
+import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg';
+import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg';
+import imageMichaelFoster from '@/images/team/michael-foster.jpg';
+import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg';
+
+export const metadata: Metadata = {
+  title: 'Next.js Development Experts | Scalable Web Solutions',
+  description:
+    'Discover expert Next.js development services for high-performance, scalable web applications. Based in Johannesburg, we tailor solutions to meet your unique needs.',
+};
 
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        title="Collaborative spirit and cutting-edge solutions."
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          At our agency, we pride ourselves on combining innovation and
+          expertise to craft Next.js applications that transform businesses.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Next.js Expertise" invert>
+            We specialize in Next.js development, ensuring unmatched
+            performance, scalability, and user experience for every project.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Collaboration" invert>
+            Our team works as an extension of yours, focusing on understanding
+            your unique goals and delivering tailored solutions.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Performance Optimization" invert>
+            With a strong focus on Core Web Vitals, we ensure your applications
+            load faster and rank higher.
           </GridListItem>
         </GridList>
       </Container>
     </div>
-  )
+  );
 }
+
+function OurProcess() {
+  return (
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+      <SectionIntro
+        eyebrow="Our process and why"
+        title="Simplifying excellence through expertise and collaboration."
+        invert
+      >
+        <p>
+          From understanding your goals to delivering outstanding results, we
+          follow a proven process that ensures success in every Next.js project
+          we undertake.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <GridList>
+          <GridListItem title="Understanding Your Needs" invert>
+            We start by gaining a deep understanding of your business goals and
+            project requirements, ensuring every solution is tailored to you.
+          </GridListItem>
+          <GridListItem title="Agile Development" invert>
+            Using Agile methodologies, we work in iterative sprints to deliver
+            results quickly and efficiently while maintaining flexibility.
+          </GridListItem>
+          <GridListItem title="Seamless Deployment" invert>
+            Leveraging CI/CD pipelines powered by GitHub Actions, we ensure
+            smooth, error-free deployments for all your Next.js applications.
+          </GridListItem>
+          <GridListItem title="Ongoing Support" invert>
+            After launch, we provide proactive support and maintenance to keep
+            your applications robust, secure, and scalable.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  );
+}
+
+function WhyChooseUs() {
+  return (
+    <div className="mt-24 rounded-4xl bg-white py-24 sm:mt-32 lg:mt-40 lg:py-32">
+      <Container>
+        <SectionIntro
+          eyebrow="Why choose us"
+          title="Delivering proven performance and tailored solutions."
+          invert={false} // Ensures text adapts to light background
+        >
+          <p>
+            With unmatched expertise and a collaborative spirit, we help you
+            unlock the full potential of Next.js.
+          </p>
+        </SectionIntro>
+        <GridList className="mt-16">
+          <GridListItem title="Specialized Expertise">
+            Our deep understanding of React and Next.js ensures advanced
+            solutions that seamlessly combine frontend brilliance and backend
+            efficiency.
+          </GridListItem>
+          <GridListItem title="Proven Performance">
+            We optimize your applications for speed, reliability, and search
+            engine performance, delivering superior user experiences.
+          </GridListItem>
+          <GridListItem title="Transparent Collaboration">
+            From fair billing to clear communication, we ensure transparency at
+            every stage of your project.
+          </GridListItem>
+          <GridListItem title="A Partnership for Success">
+            We see ourselves as an extension of your team, working towards your
+            success every step of the way.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  );
+}
+
+function WhyNextJS() {
+  return (
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+      <Container>
+        <SectionIntro
+          eyebrow="Why Next.js"
+          title="Harness the power of Next.js for modern web development."
+          invert
+        >
+          <p>
+            Next.js stands at the forefront of web development, offering
+            full-stack capabilities, scalability, and performance optimization.
+          </p>
+        </SectionIntro>
+        <GridList className="mt-16">
+          <GridListItem title="Full-Stack Capabilities" invert>
+            Combine frontend and backend seamlessly for robust application
+            architectures with Next.js.
+          </GridListItem>
+          <GridListItem title="Scalability" invert>
+            Perfect for projects that grow with your business, whether it's a
+            single-page app or a multi-market platform.
+          </GridListItem>
+          <GridListItem title="SEO Optimization" invert>
+            Leverage server-side rendering (SSR) and static site generation
+            (SSG) for improved search engine rankings and user experiences.
+          </GridListItem>
+          <GridListItem title="Advanced Integrations" invert>
+            Easily integrate AI tools, headless CMS, and third-party APIs to
+            future-proof your solutions.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  );
+}
+
 
 const team = [
   {
@@ -127,7 +247,7 @@ const team = [
       },
     ],
   },
-]
+];
 
 function Team() {
   return (
@@ -152,7 +272,7 @@ function Team() {
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
                           <Image
-                            alt=""
+                            alt={person.name}
                             {...person.image}
                             className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
                           />
@@ -175,45 +295,33 @@ function Team() {
         ))}
       </div>
     </Container>
-  )
-}
-
-export const metadata: Metadata = {
-  title: 'About Us',
-  description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+  );
 }
 
 export default async function About() {
-  const blogArticles = (await loadArticles()).slice(0, 2)
-
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About Us" title="Next.js Development Experts">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          Based in Johannesburg, South Africa, we specialize in crafting scalable,
+          high-performance web applications using Next.js. Our team of developers
+          combines cutting-edge technology with a deep commitment to your business
+          goals.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
-          </p>
-          <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            Whether you need team augmentation, replatforming, or full product
+            development, our expert Next.js services are tailored to meet your
+            unique needs. From startups to enterprises, we build solutions that
+            prioritize performance, scalability, and user experience.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="10+" label="Years of Experience" />
+          <StatListItem value="100+" label="Projects Delivered" />
+          <StatListItem value="100%" label="Client Satisfaction" />
         </StatList>
       </Container>
 
@@ -221,14 +329,20 @@ export default async function About() {
 
       <Team />
 
+      <OurProcess />
+
+      <WhyChooseUs />
+
+      <WhyNextJS />
+
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
+        title="Explore Our Blog"
+        intro="Discover insights on Next.js, web performance optimization, and modern app development."
+        pages={[]} // Placeholder for blog articles
       />
 
       <ContactSection />
     </>
-  )
+  );
 }
